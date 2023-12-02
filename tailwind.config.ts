@@ -17,16 +17,18 @@ const config: Config = {
         primary: "var(--primary)",
         secondary: "var(--secondary)",
         softprimary: "var(--soft-primary)",
-        softgray: "var(--soft-gray)",
         gray: "var(--gray)",
         yellow: "var(--yellow)",
+      },
+      margin: {
+        "24": "107px",
       },
     },
     container: {
       padding: {
-        DEFAULT: "30px",
+        DEFAULT: "0px",
         sm: "30px",
-        lg: "3rem",
+        lg: "0",
       },
       center: true,
     },

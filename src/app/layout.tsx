@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { montserrat } from "./font";
-import "./globals.css";
+import { montserrat } from "../fonts/font";
+import "../styles/globals.css";
 import MainNavBarComponent from "./components/common/mainNav/navBar";
+import ProviderComponent from "./provider";
 
 export const metadata: Metadata = {
   title: "Shwe Skincare",
@@ -17,8 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.className} relative`}>
-        <MainNavBarComponent />
-        {children}
+        <ProviderComponent>
+          <MainNavBarComponent />
+          <div className="mt-24 block w-full pb-5">{children}</div>
+        </ProviderComponent>
       </body>
     </html>
   );

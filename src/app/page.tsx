@@ -1,10 +1,15 @@
-import Image from "next/image";
+import DashboardFeature from "./components/dashboard/dashboardFeature";
+import SliderBanner from "./components/dashboard/sliderBanner";
 
-export default function Home() {
+const Mainpage = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Hi Shwe, how can help you!</h1>
-      <p>Yes, please. How to find the skincare products?</p>
+    <main className="">
+      <SliderBanner />
+      <div className="container">
+        <DashboardFeature type="new" />
+        <DashboardFeature type="luxury" />
+      </div>
     </main>
   );
-}
+};
+export default Mainpage;

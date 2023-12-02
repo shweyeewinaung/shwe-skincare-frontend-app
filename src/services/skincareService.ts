@@ -18,6 +18,12 @@ export const getAllSkincares = async (
   if (type == "sameBrand") {
     url = url + `?brand=${brand}&limit=5`;
   }
+  if (type === "brandDetail") {
+    url = url + `?brand=${brand}`;
+  }
+  if (type === "brandList") {
+    url = url + `?fields=brand,brandInfo`;
+  }
 
   const response = await axios.get(url);
   return response.data;

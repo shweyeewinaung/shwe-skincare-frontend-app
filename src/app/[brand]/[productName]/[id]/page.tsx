@@ -12,11 +12,6 @@ const ProjectDetail = ({ params }: { params: ProjectDetailProps }) => {
   if (isLoading) return "Loading...";
 
   if (error) return "An error has occurred: " + error.message;
-  console.log(data, "data");
-  console.log(params, "params");
-  console.log(params.productName, "productName");
-  console.log(params.brand, "brand");
-  console.log(params.id, "id");
 
   return (
     <div className="container pt-5">
@@ -28,7 +23,7 @@ const ProjectDetail = ({ params }: { params: ProjectDetailProps }) => {
           Home /{" "}
         </a>
         <a
-          href="/"
+          href={`/${data?.data.brand}`}
           className="hover:text-gray transition-all duration-300 ease-in-out"
         >
           {data?.data.brand} /{" "}

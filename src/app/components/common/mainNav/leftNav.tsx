@@ -18,7 +18,7 @@ const MainLeftNav = () => {
         </li>
         <li>
           <a
-            href="#"
+            href="/brands"
             className="hover:text-primary px-3 md:py-2 py-4 text-sm font-medium transition-all duration-300 ease-in-out uppercase font-medium"
           >
             Brand

@@ -1,14 +1,24 @@
-export interface SkincareInterface {
+export interface BrandDetailInterface {
+  logo: string;
+  description: string;
+  slug: string;
+}
+
+export interface BrandInterface {
+  _id: string;
+  brand: string;
+  brandInfo: BrandDetailInterface;
+}
+
+export interface SkincareInterface extends BrandInterface {
   name: string;
   slug: string;
   description: string;
   price: number;
   currency: string;
   brand: string;
-  category: string;
   image: string;
   ratingsAverage: number;
-  _id: string;
 }
 
 export interface SkincaresArrayInterface {
@@ -21,4 +31,10 @@ export interface SkincaresArrayInterface {
 };
 export type SkincareTypes = ReadonlyArray<SkincareType>; */
 
-export type SkincareFilterType = "" | "new" | "luxury" | "sameBrand";
+export type SkincareFilterType =
+  | ""
+  | "new"
+  | "luxury"
+  | "sameBrand"
+  | "brandDetail"
+  | "brandList";
